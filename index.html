@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>معلمك - المنصة التعليمية الأولى</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">معلمك</a>
+        <div class="nav-links">
+          <a href="/" class="nav-link active">الرئيسية</a>
+          <a href="/teachers" class="nav-link">المعلمون</a>
+          <a href="/subjects" class="nav-link">المواد الدراسية</a>
+          <a href="/about" class="nav-link">عن المنصة</a>
+        </div>
+        <div class="auth-buttons">
+          <button class="btn btn-secondary login-btn">تسجيل دخول</button>
+          <button class="btn btn-primary register-btn">تسجيل جديد</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">تعلم بسهولة مع أفضل المعلمين</h1>
+          <p class="hero-subtitle">منصة تعليمية متكاملة تربط الطلاب بنخبة من المعلمين المؤهلين في جميع المواد الدراسية</p>
+          <div class="search-box">
+            <input 
+              type="text" 
+              class="search-input" 
+              placeholder="ابحث عن معلم أو مادة دراسية..."
+            />
+            <button class="btn btn-primary search-btn">ابحث الآن</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">معلم مؤهل</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5000+</span>
+              <span class="stat-label">طالب نشط</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10000+</span>
+              <span class="stat-label">درس تم إكماله</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subjects">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">المواد الدراسية المتوفرة</h2>
+            <p class="section-subtitle">اختر من بين مجموعة واسعة من المواد الدراسية</p>
+          </div>
+          <div class="subjects-grid">
+            <a href="/subjects/math" class="subject-card">
+              <div class="subject-icon">🔢</div>
+              <h3>الرياضيات</h3>
+              <p>دروس في الجبر، الهندسة، والحساب</p>
+              <span class="subject-teachers">25 معلم</span>
+            </a>
+            <a href="/subjects/science" class="subject-card">
+              <div class="subject-icon">🔬</div>
+              <h3>العلوم</h3>
+              <p>الفيزياء، الكيمياء، والأحياء</p>
+              <span class="subject-teachers">30 معلم</span>
+            </a>
+            <a href="/subjects/english" class="subject-card">
+              <div class="subject-icon">🌍</div>
+              <h3>اللغة الإنجليزية</h3>
+              <p>القواعد، المحادثة، والكتابة</p>
+              <span class="subject-teachers">20 معلم</span>
+            </a>
+            <a href="/subjects/arabic" class="subject-card">
+              <div class="subject-icon">📖</div>
+              <h3>اللغة العربية</h3>
+              <p>النحو، الأدب، والبلاغة</p>
+              <span class="subject-teachers">15 معلم</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">لماذا تختار منصة معلمك؟</h2>
+            <p class="section-subtitle">مميزات تجعل تجربة التعلم أكثر فاعلية وسهولة</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">👨‍🏫</div>
+              <h3>معلمون متميزون</h3>
+              <p>نخبة من المعلمين المؤهلين والحاصلين على أعلى التقييمات</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>تنوع المواد</h3>
+              <p>جميع المواد الدراسية متوفرة مع خيارات متعددة للمعلمين</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⏰</div>
+              <h3>مرونة المواعيد</h3>
+              <p>اختر الوقت المناسب لك وجدول دروسك بكل سهولة</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">كيف تعمل المنصة؟</h2>
+            <p class="section-subtitle">خطوات بسيطة للبدء في رحلتك التعليمية</p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>سجل حساب جديد</h3>
+              <p>أنشئ حسابك مجاناً كطالب أو معلم</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>اختر المعلم المناسب</h3>
+              <p>ابحث عن المعلم المناسب لمادتك</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>احجز درسك</h3>
+              <p>اختر الموعد المناسب واحجز درسك</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h3>ابدأ التعلم</h3>
+              <p>استمتع بتجربة تعليمية متميزة</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>ابدأ رحلتك التعليمية اليوم</h2>
+            <p>سجل الآن واحصل على أفضل تجربة تعليمية مع نخبة من المعلمين المتميزين</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary register-btn-large">سجل كطالب</button>
+              <button class="btn btn-secondary register-teacher-btn">سجل كمعلم</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">معلمك</div>
+          <div class="footer-links">
+            <a href="/about">عن المنصة</a>
+            <a href="https://sot.om/contact" target="_blank">تواصل معنا</a>
+            <a href="/privacy">سياسة الخصوصية</a>
+            <a href="/terms">الشروط والأحكام</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link">تويتر</a>
+            <a href="#" class="social-link">فيسبوك</a>
+            <a href="#" class="social-link">انستغرام</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>جميع الحقوق محفوظة © معلمك 2024</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

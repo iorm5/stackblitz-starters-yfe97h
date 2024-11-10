@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>اختر نوع حسابك - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/register-type.css" />
+    <script type="module" src="js/register-type.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="back-btn">
+                <i class="icon-arrow-right"></i>
+                رجوع
+            </button>
+            <a href="/" class="logo">معلمك</a>
+        </div>
+    </nav>
+
+    <main class="register-type-main">
+        <div class="register-type-container">
+            <div class="register-type-content">
+                <h1>اختر نوع حسابك</h1>
+                <p>اختر نوع الحساب المناسب لك للبدء في رحلتك التعليمية</p>
+                
+                <div class="type-cards">
+                    <div class="type-card" data-type="student">
+                        <div class="type-icon">👨‍🎓</div>
+                        <h2>طالب</h2>
+                        <p>ابحث عن معلمين مؤهلين وابدأ رحلة التعلم</p>
+                        <ul class="type-features">
+                            <li>البحث عن معلمين في منطقتك</li>
+                            <li>حجز الدروس بسهولة</li>
+                            <li>تقييم المعلمين</li>
+                            <li>متابعة تقدمك الدراسي</li>
+                        </ul>
+                        <button class="type-btn student-btn">تسجيل كطالب</button>
+                    </div>
+                    
+                    <div class="type-card" data-type="teacher">
+                        <div class="type-icon">👨‍🏫</div>
+                        <h2>معلم</h2>
+                        <p>شارك خبرتك وابدأ في التدريس</p>
+                        <ul class="type-features">
+                            <li>إنشاء جدول دروس مرن</li>
+                            <li>التواصل مع الطلاب</li>
+                            <li>إدارة الحجوزات</li>
+                            <li>تحديد أسعارك الخاصة</li>
+                        </ul>
+                        <button class="type-btn teacher-btn">تسجيل كمعلم</button>
+                    </div>
+                </div>
+
+                <div class="login-prompt">
+                    <p>لديك حساب بالفعل؟ <a href="/login.html">تسجيل الدخول</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

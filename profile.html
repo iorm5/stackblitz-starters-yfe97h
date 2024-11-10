@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>الملف الشخصي - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="js/profile.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">معلمك</div>
+      <div class="nav-links">
+        <a href="/">الرئيسية</a>
+        <a href="/profile.html" class="active">الملف الشخصي</a>
+        <a href="/search.html">بحث عن معلم</a>
+        <a href="/settings.html">الإعدادات</a>
+      </div>
+      <div class="auth-buttons">
+        <button class="auth-btn" id="logoutBtn">تسجيل خروج</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="profile-container">
+        <div class="profile-card">
+          <h1>الملف الشخصي</h1>
+          
+          <div class="profile-info">
+            <div class="info-group">
+              <label>الاسم:</label>
+              <span id="profileName"></span>
+            </div>
+            
+            <div class="info-group">
+              <label>البريد الإلكتروني:</label>
+              <span id="profileEmail"></span>
+            </div>
+            
+            <div class="info-group">
+              <label>رقم الهاتف:</label>
+              <span id="profilePhone"></span>
+            </div>
+            
+            <div class="info-group">
+              <label>نوع الحساب:</label>
+              <span id="profileType"></span>
+            </div>
+
+            <div id="teacherOnlyInfo" class="hidden">
+              <div class="info-group">
+                <label>المادة:</label>
+                <span id="profileSubject"></span>
+              </div>
+              
+              <div class="info-group">
+                <label>نبذة:</label>
+                <div class="bio-container">
+                  <p id="profileBio" class="bio-text"></p>
+                  <button id="editBioBtn" class="edit-btn">تعديل النبذة</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Edit Modal -->
+          <div id="bioEditModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>تعديل النبذة</h2>
+              <form id="bioEditForm">
+                <div class="form-group">
+                  <label for="bioText">النبذة الشخصية</label>
+                  <textarea id="bioText" name="bio" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">حفظ التغييرات</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>جميع الحقوق محفوظة © معلمك 2024</p>
+    </footer>
+  </body>
+</html>

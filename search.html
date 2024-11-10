@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>البحث عن معلمين - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="js/search.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">معلمك</div>
+      <div class="nav-links">
+        <a href="/">الرئيسية</a>
+        <a href="/profile.html">الملف الشخصي</a>
+        <a href="/search.html" class="active">بحث عن معلم</a>
+        <a href="/settings.html">الإعدادات</a>
+      </div>
+      <div class="auth-buttons">
+        <button class="auth-btn" id="logoutBtn">تسجيل خروج</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="search-container">
+        <div class="search-filters">
+          <h2>البحث عن معلم</h2>
+          <div class="filters-group">
+            <select id="subjectFilter">
+              <option value="">جميع المواد</option>
+              <option value="math">رياضيات</option>
+              <option value="science">علوم</option>
+              <option value="english">لغة إنجليزية</option>
+              <option value="arabic">لغة عربية</option>
+            </select>
+            <input type="text" id="locationFilter" placeholder="المنطقة" />
+            <button id="searchBtn" class="primary-btn">بحث</button>
+          </div>
+        </div>
+
+        <div class="teachers-grid" id="teachersGrid">
+          <!-- Teachers will be populated here dynamically -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>جميع الحقوق محفوظة © معلمك 2024</p>
+    </footer>
+  </body>
+</html>

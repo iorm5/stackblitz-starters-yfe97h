@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>معلمو العلوم - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/subject.css" />
+    <script type="module" src="js/subject.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="back-btn">
+                <i class="icon-arrow-right"></i>
+                رجوع
+            </button>
+            <a href="/" class="logo">معلمك</a>
+        </div>
+    </nav>
+
+    <main class="subject-page science">
+        <div class="container">
+            <div class="subject-header">
+                <h1 id="subjectTitle">معلمو العلوم</h1>
+                <p id="subjectDescription">نخبة من معلمي العلوم المتخصصين في الفيزياء، الكيمياء، والأحياء. اختر معلمك المفضل وابدأ رحلة اكتشاف عالم العلوم</p>
+            </div>
+
+            <div class="filters">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="ابحث باسم المعلم..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="filter-options">
+                    <select id="specialtyFilter" class="filter-select">
+                        <option value="">جميع التخصصات</option>
+                        <option value="physics">فيزياء</option>
+                        <option value="chemistry">كيمياء</option>
+                        <option value="biology">أحياء</option>
+                    </select>
+                    <select id="cityFilter" class="filter-select">
+                        <option value="">جميع المدن</option>
+                        <option value="muscat">مسقط</option>
+                        <option value="salalah">صلالة</option>
+                        <option value="sohar">صحار</option>
+                        <option value="nizwa">نزوى</option>
+                    </select>
+                    <select id="experienceFilter" class="filter-select">
+                        <option value="">جميع مستويات الخبرة</option>
+                        <option value="0-2">0-2 سنوات</option>
+                        <option value="3-5">3-5 سنوات</option>
+                        <option value="5+">أكثر من 5 سنوات</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="teachersList" class="teachers-grid"></div>
+        </div>
+    </main>
+</body>
+</html>

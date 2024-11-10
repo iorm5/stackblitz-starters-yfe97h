@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>لوحة تحكم المعلم - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
+    <script type="module" src="js/teacher-dashboard.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img id="profileImage" src="images/default-avatar.png" alt="الصورة الشخصية">
+                    <button class="edit-profile-image" id="editProfileImage">
+                        <i class="icon-camera"></i>
+                    </button>
+                </div>
+                <h2 id="teacherName" class="user-name">اسم المعلم</h2>
+                <p id="teacherSubject" class="user-subject">المادة</p>
+            </div>
+
+            <div class="nav-links">
+                <button class="nav-item active" data-section="lessons">
+                    <i class="icon-book"></i>
+                    الدروس
+                </button>
+                <button class="nav-item" data-section="videos">
+                    <i class="icon-video"></i>
+                    الفيديوهات
+                </button>
+                <button class="nav-item" data-section="messages">
+                    <i class="icon-message"></i>
+                    الرسائل
+                    <span class="badge" id="messagesCount">0</span>
+                </button>
+                <button class="nav-item" data-section="notifications">
+                    <i class="icon-bell"></i>
+                    التنبيهات
+                    <span class="badge" id="notificationsCount">0</span>
+                </button>
+                <button class="nav-item" data-section="profile">
+                    <i class="icon-user"></i>
+                    الملف الشخصي
+                </button>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                <i class="icon-logout"></i>
+                تسجيل الخروج
+            </button>
+        </nav>
+
+        <main class="dashboard-content">
+            <!-- Lessons Section -->
+            <section id="lessonsSection" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>
+                        <i class="icon-book"></i>
+                        الدروس
+                    </h1>
+                    <button id="addLessonBtn" class="btn btn-primary">
+                        <i class="icon-plus"></i>
+                        إضافة درس جديد
+                    </button>
+                </div>
+
+                <div class="lessons-grid" id="lessonsGrid">
+                    <!-- Lessons will be populated here -->
+                </div>
+            </section>
+
+            <!-- Videos Section -->
+            <section id="videosSection" class="dashboard-section">
+                <div class="section-header">
+                    <h1>
+                        <i class="icon-video"></i>
+                        الفيديوهات التعليمية
+                    </h1>
+                    <button id="addVideoBtn" class="btn btn-primary">
+                        <i class="icon-plus"></i>
+                        إضافة فيديو
+                    </button>
+                </div>
+
+                <div class="videos-grid" id="videosGrid">
+                    <!-- Videos will be populated here -->
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messagesSection" class="dashboard-section">
+                <div class="section-header">
+                    <h1>
+                        <i class="icon-message"></i>
+                        الرسائل
+                    </h1>
+                </div>
+                <div class="messages-list" id="messagesList">
+                    <!-- Messages will be populated here -->
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notificationsSection" class="dashboard-section">
+                <div class="section-header">
+                    <h1>
+                        <i class="icon-bell"></i>
+                        التنبيهات
+                    </h1>
+                </div>
+                <div class="notifications-list" id="notificationsList">
+                    <!-- Notifications will be populated here -->
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profileSection" class="dashboard-section">
+                <div class="section-header">
+                    <h1>
+                        <i class="icon-user"></i>
+                        الملف الشخصي
+                    </h1>
+                </div>
+                <div class="profile-edit-container">
+                    <form id="profileForm" class="profile-form">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">المادة</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="math">رياضيات</option>
+                                <option value="science">علوم</option>
+                                <option value="english">لغة إنجليزية</option>
+                                <option value="arabic">لغة عربية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">نبذة تعريفية</label>
+                            <textarea id="bio" name="bio" rows="4" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+.about-page {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--background-light) 0%, #e0f2fe 100%);
+    min-height: calc(100vh - 64px);
+    margin-top: 64px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.company-info {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.founded {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.founder {
+    font-size: 1.125rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Features Section */
+.features {
+    margin-bottom: 6rem;
+}
+
+.features h2,
+.benefits h2,
+.company h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-hover));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits {
+    margin-bottom: 6rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+}
+
+/* Company Section */
+.company-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.company-logo {
+    width: 200px;
+    height: auto;
+}
+
+.company-content {
+    flex: 1;
+}
+
+.company-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.company-contact {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 2rem 1rem;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .features h2,
+    .benefits h2,
+    .company h2 {
+        font-size: 1.75rem;
+    }
+
+    .company-card {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .company-logo {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .company-contact {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>المعلمون - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/teachers.css" />
+    <script type="module" src="js/teachers.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-start">
+                <button class="back-btn">
+                    <i class="icon-arrow-right"></i>
+                    رجوع
+                </button>
+                <a href="/" class="logo">معلمك</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="teachers-page">
+        <div class="container">
+            <section class="teachers-header">
+                <h1>المعلمون المتميزون</h1>
+                <p>نخبة من المعلمين المؤهلين في جميع المواد الدراسية</p>
+            </section>
+
+            <section class="teachers-filters">
+                <div class="search-input-group">
+                    <i class="icon-search"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="form-control" 
+                        placeholder="ابحث باسم المعلم..."
+                    >
+                </div>
+                <div class="filters-group">
+                    <select id="subjectFilter" class="form-control">
+                        <option value="">جميع المواد</option>
+                        <option value="math">رياضيات</option>
+                        <option value="science">علوم</option>
+                        <option value="english">لغة إنجليزية</option>
+                        <option value="arabic">لغة عربية</option>
+                    </select>
+                    <select id="cityFilter" class="form-control">
+                        <option value="">جميع المدن</option>
+                        <option value="muscat">مسقط</option>
+                        <option value="salalah">صلالة</option>
+                        <option value="sohar">صحار</option>
+                        <option value="nizwa">نزوى</option>
+                    </select>
+                    <select id="ratingFilter" class="form-control">
+                        <option value="">جميع التقييمات</option>
+                        <option value="4">4 نجوم وأعلى</option>
+                        <option value="3">3 نجوم وأعلى</option>
+                    </select>
+                    <select id="experienceFilter" class="form-control">
+                        <option value="">جميع مستويات الخبرة</option>
+                        <option value="0-2">0-2 سنوات</option>
+                        <option value="3-5">3-5 سنوات</option>
+                        <option value="5+">أكثر من 5 سنوات</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="teachers-grid" id="teachersGrid">
+                <!-- Teachers will be populated here -->
+            </section>
+        </div>
+    </main>
+</body>
+</html>

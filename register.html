@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>تسجيل جديد - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+    <script type="module" src="js/register.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="back-btn">
+                <i class="icon-arrow-right"></i>
+                رجوع
+            </button>
+            <a href="/" class="logo">معلمك</a>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <div class="register-box">
+            <h1 id="registerTitle">تسجيل جديد</h1>
+            
+            <!-- Student Registration Form -->
+            <form id="studentForm" class="registration-form">
+                <input type="hidden" name="accountType" value="student">
+                
+                <div class="form-group">
+                    <label for="studentFirstName">الاسم الأول</label>
+                    <input type="text" id="studentFirstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentLastName">اسم العائلة</label>
+                    <input type="text" id="studentLastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentPhone">رقم الهاتف</label>
+                    <input type="tel" id="studentPhone" name="phone" 
+                           pattern="00968[0-9]{8}" 
+                           placeholder="00968xxxxxxxx" required>
+                    <small class="hint">يجب أن يبدأ ب 00968 ويتكون من 8 أرقام</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentEmail">البريد الإلكتروني</label>
+                    <input type="email" id="studentEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentCity">المدينة</label>
+                    <select id="studentCity" name="city" required>
+                        <option value="">اختر المدينة</option>
+                        <option value="muscat">مسقط</option>
+                        <option value="salalah">صلالة</option>
+                        <option value="sohar">صحار</option>
+                        <option value="nizwa">نزوى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentSubject">المادة الدراسية</label>
+                    <select id="studentSubject" name="subject" required>
+                        <option value="">اختر المادة</option>
+                        <option value="math">رياضيات</option>
+                        <option value="science">علوم</option>
+                        <option value="english">لغة إنجليزية</option>
+                        <option value="arabic">لغة عربية</option>
+                    </select>
+                </div>
+
+                <div id="studentSpecialtyGroup" class="form-group hidden">
+                    <label for="studentSpecialty">التخصص</label>
+                    <select id="studentSpecialty" name="specialty">
+                        <option value="">اختر التخصص</option>
+                        <option value="physics">فيزياء</option>
+                        <option value="chemistry">كيمياء</option>
+                        <option value="biology">أحياء</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentPassword">كلمة المرور</label>
+                    <input type="password" id="studentPassword" name="password" required minlength="5">
+                    <small class="hint">يجب أن تحتوي على 5 أحرف على الأقل</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentConfirmPassword">تأكيد كلمة المرور</label>
+                    <input type="password" id="studentConfirmPassword" name="confirmPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentSecurityQuestion">سؤال الأمان</label>
+                    <select id="studentSecurityQuestion" name="securityQuestion" required>
+                        <option value="">اختر سؤال الأمان</option>
+                        <option value="birthCity">ما هي مدينة ولادتك؟</option>
+                        <option value="motherName">ما هو اسم والدتك؟</option>
+                        <option value="firstSchool">ما هو اسم مدرستك الأولى؟</option>
+                        <option value="favoriteColor">ما هو لونك المفضل؟</option>
+                    </select>
+                    <small class="hint">سيتم استخدام هذا السؤال لاستعادة كلمة المرور في حال نسيانها</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentSecurityAnswer">إجابة سؤال الأمان</label>
+                    <input type="text" id="studentSecurityAnswer" name="securityAnswer" required>
+                    <small class="hint">تذكر هذه الإجابة جيداً</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">تسجيل كطالب</button>
+            </form>
+
+            <!-- Teacher Registration Form -->
+            <form id="teacherForm" class="registration-form hidden">
+                <input type="hidden" name="accountType" value="teacher">
+                
+                <div class="form-group">
+                    <label for="teacherFirstName">الاسم الأول</label>
+                    <input type="text" id="teacherFirstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherLastName">اسم العائلة</label>
+                    <input type="text" id="teacherLastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherPhone">رقم الهاتف</label>
+                    <input type="tel" id="teacherPhone" name="phone" 
+                           pattern="00968[0-9]{8}" 
+                           placeholder="00968xxxxxxxx" required>
+                    <small class="hint">يجب أن يبدأ ب 00968 ويتكون من 8 أرقام</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherEmail">البريد الإلكتروني</label>
+                    <input type="email" id="teacherEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherCity">المدينة</label>
+                    <select id="teacherCity" name="city" required>
+                        <option value="">اختر المدينة</option>
+                        <option value="muscat">مسقط</option>
+                        <option value="salalah">صلالة</option>
+                        <option value="sohar">صحار</option>
+                        <option value="nizwa">نزوى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherSubject">المادة الدراسية</label>
+                    <select id="teacherSubject" name="subject" required>
+                        <option value="">اختر المادة</option>
+                        <option value="math">رياضيات</option>
+                        <option value="science">علوم</option>
+                        <option value="english">لغة إنجليزية</option>
+                        <option value="arabic">لغة عربية</option>
+                    </select>
+                </div>
+
+                <div id="teacherSpecialtyGroup" class="form-group hidden">
+                    <label for="teacherSpecialty">التخصص</label>
+                    <select id="teacherSpecialty" name="specialty">
+                        <option value="">اختر التخصص</option>
+                        <option value="physics">فيزياء</option>
+                        <option value="chemistry">كيمياء</option>
+                        <option value="biology">أحياء</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherExperience">سنوات الخبرة</label>
+                    <input type="number" id="teacherExperience" name="experience" min="0" required>
+                    <small class="hint">عدد سنوات الخبرة في التدريس</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherPassword">كلمة المرور</label>
+                    <input type="password" id="teacherPassword" name="password" required minlength="5">
+                    <small class="hint">يجب أن تحتوي على 5 أحرف على الأقل</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherConfirmPassword">تأكيد كلمة المرور</label>
+                    <input type="password" id="teacherConfirmPassword" name="confirmPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherSecurityQuestion">سؤال الأمان</label>
+                    <select id="teacherSecurityQuestion" name="securityQuestion" required>
+                        <option value="">اختر سؤال الأمان</option>
+                        <option value="birthCity">ما هي مدينة ولادتك؟</option>
+                        <option value="motherName">ما هو اسم والدتك؟</option>
+                        <option value="firstSchool">ما هو اسم مدرستك الأولى؟</option>
+                        <option value="favoriteColor">ما هو لونك المفضل؟</option>
+                    </select>
+                    <small class="hint">سيتم استخدام هذا السؤال لاستعادة كلمة المرور في حال نسيانها</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="teacherSecurityAnswer">إجابة سؤال الأمان</label>
+                    <input type="text" id="teacherSecurityAnswer" name="securityAnswer" required>
+                    <small class="hint">تذكر هذه الإجابة جيداً</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">تسجيل كمعلم</button>
+            </form>
+
+            <div class="login-link">
+                لديك حساب بالفعل؟ <a href="/login.html">تسجيل الدخول</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

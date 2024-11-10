@@ -1,0 +1,171 @@
+.register-type-main {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--background-light) 0%, #e0f2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.register-type-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.register-type-content {
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.register-type-content h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.register-type-content > p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.type-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.type-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.type-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-hover));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.type-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.type-card:hover::before {
+    opacity: 1;
+}
+
+.type-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.type-card h2 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.type-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.type-features {
+    text-align: right;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.type-features li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.type-features li::before {
+    content: '✓';
+    color: var(--success-color);
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+}
+
+.type-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.student-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.student-btn:hover {
+    background: var(--primary-hover);
+}
+
+.teacher-btn {
+    background: var(--background-light);
+    color: var(--primary-color);
+}
+
+.teacher-btn:hover {
+    background: #e5e7eb;
+}
+
+.login-prompt {
+    margin-top: 2rem;
+    color: var(--text-secondary);
+}
+
+.login-prompt a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .register-type-main {
+        padding: 1rem;
+    }
+
+    .register-type-content h1 {
+        font-size: 2rem;
+    }
+
+    .type-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .type-card {
+        padding: 2rem;
+    }
+}

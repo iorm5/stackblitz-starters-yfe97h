@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>تسجيل الدخول - معلمك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <script type="module" src="js/login.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-start">
+                <button class="back-btn">
+                    <i class="icon-arrow-right"></i>
+                    رجوع
+                </button>
+                <a href="/" class="logo">معلمك</a>
+            </div>
+            <div class="nav-end">
+                <a href="/register-type.html" class="nav-link register-link">
+                    <i class="icon-user-plus"></i>
+                    تسجيل جديد
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>تسجيل الدخول</h1>
+                <p>أهلاً بك مجدداً في منصة معلمك</p>
+            </div>
+
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="identifier">اسم المستخدم أو رقم الهاتف</label>
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="identifier" 
+                            name="identifier" 
+                            placeholder="أدخل اسم المستخدم أو رقم الهاتف"
+                            required
+                            autocomplete="username"
+                        >
+                    </div>
+                    <small class="input-hint">يمكنك تسجيل الدخول باستخدام اسم المستخدم أو رقم الهاتف</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="toggle-password" aria-label="إظهار كلمة المرور">
+                            <i class="icon-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember" id="remember">
+                        <span>تذكرني</span>
+                    </label>
+                    <a href="/forgot-password.html" class="forgot-password">نسيت كلمة المرور؟</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span class="btn-text">تسجيل الدخول</span>
+                    <span class="btn-loader hidden"></span>
+                </button>
+            </form>
+
+            <div class="register-link">
+                ليس لديك حساب؟ 
+                <a href="/register-type.html" class="register-btn">تسجيل جديد</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
